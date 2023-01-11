@@ -10,7 +10,7 @@
             <div>
                 <p>
 
-                    <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/unidades">Volver</a>
+                    <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/unidades"> <i class="fas fa-arrow-left"></i> Volver</a>
                 </p>
             </div>
             <table id="datatablesSimple">
