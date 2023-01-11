@@ -97,7 +97,7 @@
                         </a>
                         <div class="collapse" id="collapseAdmin" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url(); ?>/administracion">Configuracion</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/configuracion">Configuracion</a>
                             </nav>
                         </div>
 
