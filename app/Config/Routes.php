@@ -118,3 +118,15 @@ $routes->get('cajas/editar/(:num)', 'Cajas::editar/$1');
 $routes->get('cajas/eliminar/(:num)', 'Cajas::eliminar/$1');
 $routes->get('cajas/eliminados', 'Cajas::eliminados');
 $routes->get('cajas/reingresar/(:num)', 'Cajas::reingresar/$1');
+
+// Usuarios
+// rutas post 
+$routes->post('usuarios/insertar', 'Usuarios::insertar');
+$routes->post('usuarios/actualizar', 'Usuarios::actualizar');
+// rutas get
+$routes->get('usuarios', 'Usuarios::index');
+$routes->get('usuarios/nuevo', 'Usuarios::nuevo');
+$routes->get('usuarios/editar/(:num)', 'Usuarios::editar/$1');
+$routes->get('usuarios/eliminar/(:num)', 'Usuarios::eliminar/$1');
+$routes->get('usuarios/eliminados', 'Usuarios::eliminados');
+$routes->get('usuarios/reingresar/(:num)', 'Usuarios::reingresar/$1');
