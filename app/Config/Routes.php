@@ -103,14 +103,6 @@ $routes->get('clientes/reingresar/(:num)', 'Clientes::reingresar/$1');
 
 // Administracion / configuracion
 // rutas post 
-// $routes->post('configuracion/insertar', 'Configuracion::insertar');
 $routes->post('configuracion/actualizar', 'Configuracion::actualizar');
 // rutas get
 $routes->get('configuracion', 'Configuracion::index');
-
-
-// $routes->get('configuracion/nuevo', 'Configuracion::nuevo');
-// $routes->get('configuracion/editar/(:num)', 'Configuracion::editar/$1');
-// $routes->get('configuracion/eliminar/(:num)', 'Configuracion::eliminar/$1');
-// $routes->get('configuracion/eliminados', 'Configuracion::eliminados');
-// $routes->get('configuracion/reingresar/(:num)', 'Configuracion::reingresar/$1');
