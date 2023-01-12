@@ -130,3 +130,15 @@ $routes->get('usuarios/editar/(:num)', 'Usuarios::editar/$1');
 $routes->get('usuarios/eliminar/(:num)', 'Usuarios::eliminar/$1');
 $routes->get('usuarios/eliminados', 'Usuarios::eliminados');
 $routes->get('usuarios/reingresar/(:num)', 'Usuarios::reingresar/$1');
+
+// Roles
+// rutas post 
+$routes->post('roles/insertar', 'Roles::insertar');
+$routes->post('roles/actualizar', 'Roles::actualizar');
+// rutas get
+$routes->get('roles', 'Roles::index');
+$routes->get('roles/nuevo', 'Roles::nuevo');
+$routes->get('roles/editar/(:num)', 'Roles::editar/$1');
+$routes->get('roles/eliminar/(:num)', 'Roles::eliminar/$1');
+$routes->get('roles/eliminados', 'Roles::eliminados');
+$routes->get('roles/reingresar/(:num)', 'Roles::reingresar/$1');
