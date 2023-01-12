@@ -81,8 +81,6 @@
                         <div class="collapse" id="collapseClientes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/clientes">Clientes</a>
-                                <a class="nav-link" href="#">...</a>
-                                <a class="nav-link" href="#">...</a>
                             </nav>
                         </div>
 
@@ -98,6 +96,8 @@
                         <div class="collapse" id="collapseAdmin" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/configuracion">Configuracion</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/cajas">Cajas</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/usuarios">Usuarios</a>
                             </nav>
                         </div>
 
