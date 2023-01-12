@@ -98,6 +98,7 @@
                                 <a class="nav-link" href="<?php echo base_url(); ?>/configuracion">Configuracion</a>
                                 <a class="nav-link" href="<?php echo base_url(); ?>/cajas">Cajas</a>
                                 <a class="nav-link" href="<?php echo base_url(); ?>/usuarios">Usuarios</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/roles">Roles</a>
                             </nav>
                         </div>
 
