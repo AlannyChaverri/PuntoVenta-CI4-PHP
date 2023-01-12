@@ -106,3 +106,15 @@ $routes->get('clientes/reingresar/(:num)', 'Clientes::reingresar/$1');
 $routes->post('configuracion/actualizar', 'Configuracion::actualizar');
 // rutas get
 $routes->get('configuracion', 'Configuracion::index');
+
+// Cajas
+// rutas post 
+$routes->post('cajas/insertar', 'Cajas::insertar');
+$routes->post('cajas/actualizar', 'Cajas::actualizar');
+// rutas get
+$routes->get('cajas', 'Cajas::index');
+$routes->get('cajas/nuevo', 'Cajas::nuevo');
+$routes->get('cajas/editar/(:num)', 'Cajas::editar/$1');
+$routes->get('cajas/eliminar/(:num)', 'Cajas::eliminar/$1');
+$routes->get('cajas/eliminados', 'Cajas::eliminados');
+$routes->get('cajas/reingresar/(:num)', 'Cajas::reingresar/$1');
