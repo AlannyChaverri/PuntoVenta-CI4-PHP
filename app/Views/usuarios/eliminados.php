@@ -18,10 +18,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Usuario</th>
-                        <th>Password</th>
                         <th>Nombre</th>
-                        <th>ID Caja</th>
-                        <th>ID Rol</th>
                         <th>Activar</th>
                     </tr>
                 </thead>
@@ -35,16 +32,7 @@
                                 <?php echo $dato['usuario']; ?>
                             </td>
                             <td>
-                                <?php echo $dato['password']; ?>
-                            </td>
-                            <td>
                                 <?php echo $dato['nombre']; ?>
-                            </td>
-                            <td>
-                                <?php echo $dato['id_caja']; ?>
-                            </td>
-                            <td>
-                                <?php echo $dato['id_rol']; ?>
                             </td>
                             <td>
                                 <a onclick="return confirmar()" href="<?php echo base_url() . '/usuarios/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a>
