@@ -147,3 +147,15 @@ $routes->get('roles/editar/(:num)', 'Roles::editar/$1');
 $routes->get('roles/eliminar/(:num)', 'Roles::eliminar/$1');
 $routes->get('roles/eliminados', 'Roles::eliminados');
 $routes->get('roles/reingresar/(:num)', 'Roles::reingresar/$1');
+
+// Compras
+// rutas post 
+$routes->post('compras/guarda', 'Compras::guarda');
+$routes->post('compras/actualizar', 'Compras::actualizar');
+// rutas get
+$routes->get('compras', 'Compras::index');
+$routes->get('compras/nuevo', 'Compras::nuevo');
+$routes->get('compras/editar/(:num)', 'Compras::editar/$1');
+$routes->get('compras/eliminar/(:num)', 'Compras::eliminar/$1');
+$routes->get('compras/eliminados', 'Compras::eliminados');
+$routes->get('compras/reingresar/(:num)', 'Compras::reingresar/$1');

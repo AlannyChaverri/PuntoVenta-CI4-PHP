@@ -10,10 +10,10 @@
             <div>
                 <p>
 
-                    <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/usuarios"> <i class="fas fa-arrow-left"></i> Volver</a>
+                    <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/usuarios"><i class="fas fa-arrow-left"></i> Volver</a>
                 </p>
             </div>
-            <table id="datatablesSimple">
+            <table class="table table-bordered" id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -35,7 +35,7 @@
                                 <?php echo $dato['nombre']; ?>
                             </td>
                             <td>
-                                <a onclick="return confirmar()" href="<?php echo base_url() . '/usuarios/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a>
+                                <a onclick="return confirmar()" href="<?php echo base_url() . '/usuarios/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="  fa-solid fa-arrow-up-from-bracket"></i></a>
                                 <!-- <a data-bs-toggle="modal" data-bs-target="#modal-reactivar" href="<?php echo base_url() . '/usuarios/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a> -->
                             </td>
                         </tr>

@@ -13,7 +13,7 @@
                     <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/cajas"> <i class="fas fa-arrow-left"></i> Volver</a>
                 </p>
             </div>
-            <table id="datatablesSimple">
+            <table class="table table-bordered" id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -39,7 +39,7 @@
                                 <?php echo $dato['folio']; ?>
                             </td>
                             <td>
-                                <a onclick="return confirmar()" href="<?php echo base_url() . '/cajas/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a>
+                                <a onclick="return confirmar()" href="<?php echo base_url() . '/cajas/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="  fa-solid fa-arrow-up-from-bracket"></i></a>
                                 <!-- <a data-bs-toggle="modal" data-bs-target="#modal-reactivar" href="<?php echo base_url() . '/unidades/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a> -->
                             </td>
                         </tr>

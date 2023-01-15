@@ -13,10 +13,13 @@ $user_session = session();
     <meta name="author" content="" />
     <link rel="icon" type="image/png" href="<?= base_url('images/tienda.png') ?>">
     <title>Punto de venta</title>
-    <!-- css  -->
-    <link href="<?php echo base_url(); ?>/css/style.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/css/styles.css" rel="stylesheet" />
-    <script src="<?php echo base_url(); ?>/css/all.js" crossorigin="anonymous"></script>
+    <!-- css  b4 -->
+    <link href="<?php echo base_url() ?>/css/styles.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="<?php echo base_url() ?>/js/all.min.js"></script>
+    <!-- fa -->
+    <script src="https://kit.fontawesome.com/982d15226c.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -26,13 +29,6 @@ $user_session = session();
         <a class="navbar-brand ps-3" href="<?php echo base_url(); ?>/index">Tienda <i class="fa-solid fa-shop"></i></a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-        <!-- Navbar Search-->
-        <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-            </div>
-        </form> -->
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
             <li class="nav-item dropdown">
@@ -56,7 +52,7 @@ $user_session = session();
 
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-tags"></i>
+                                <i class="fas fa-solid fa-tags"></i>
                             </div>
                             Productos
                             <div class="sb-sidenav-collapse-arrow">
@@ -73,7 +69,7 @@ $user_session = session();
 
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-users"></i>
+                                <i class="fas fa-solid fa-users"></i>
                             </div>
                             Clientes
                             <div class="sb-sidenav-collapse-arrow">
@@ -85,6 +81,22 @@ $user_session = session();
                         <div class="collapse" id="collapseClientes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/clientes">Clientes</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCompras" aria-expanded="false" aria-controls="collapseCompras">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-solid fa-cash-register"></i>
+                            </div>
+                            Compras
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapseCompras" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url(); ?>/compras/nuevo">Nueva compra</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/compras/compras">Compras</a>
                             </nav>
                         </div>
 

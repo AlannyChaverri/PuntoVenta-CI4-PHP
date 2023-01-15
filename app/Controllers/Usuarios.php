@@ -12,7 +12,7 @@ class Usuarios extends BaseController
     protected $usuarios;
     protected $cajas;
     protected $roles;
-    protected $reglas, $reglasLogin, $reglasCambioPass;
+    protected $reglas, $reglasEdit, $reglasLogin, $reglasCambioPass;
 
     public function __construct()
     {
@@ -30,6 +30,33 @@ class Usuarios extends BaseController
                     'is_unique' => 'El usuario no es valido o ya existe.',
                 ]
             ],
+            'password' => [
+                'rueles' => 'required',
+                'errors' => [
+                    'required' => 'El campo de password es obligatorio.'
+                ]
+            ],
+            'repassword' => [
+                'rueles' => 'matches[password]',
+                'errors' => [
+                    'matches' => 'Los password no coinciden.'
+                ]
+            ],
+            'id_caja' => [
+                'rueles' => 'required',
+                'errors' => [
+                    'required' => 'El campo de id caja es obligatorio.'
+                ]
+            ],
+            'id_rol' => [
+                'rueles' => 'required',
+                'errors' => [
+                    'required' => 'El campo de id rol es obligatorio.'
+                ]
+            ]
+        ];
+
+        $this->reglasEdit = [
             'password' => [
                 'rueles' => 'required',
                 'errors' => [
@@ -156,7 +183,7 @@ class Usuarios extends BaseController
 
     public function actualizar()
     {
-        if ($this->request->getMethod() == "post" && $this->validate($this->reglas)) {
+        if ($this->request->getMethod() == "post" && $this->validate($this->reglasEdit)) {
             $hash = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
             $this->usuarios->update(
                 $this->request->getPost('id'),

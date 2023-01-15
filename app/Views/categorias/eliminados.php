@@ -13,7 +13,7 @@
                     <a class=" btn btn-primary" rel="stylesheet" href="<?php echo base_url(); ?>/categorias"> <i class="fas fa-arrow-left"></i> Volver</a>
                 </p>
             </div>
-            <table id="datatablesSimple">
+            <table class="table table-bordered" id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -31,7 +31,7 @@
                                 <?php echo $dato['nombre']; ?>
                             </td>
                             <td>
-                                <a onclick="return confirmar()" href="<?php echo base_url() . '/categorias/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i> </a>
+                                <a onclick="return confirmar()" href="<?php echo base_url() . '/categorias/reingresar/' . $dato['id']; ?>" class="btn btn-success"> <i class="  fa-solid fa-arrow-up-from-bracket"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

@@ -8,7 +8,7 @@
                     <a class=" btn btn-secondary" rel="stylesheet" href="<?php echo base_url(); ?>/cajas/eliminados">Eliminados <i class="fa-solid fa-eraser"></i></a>
                 </p>
             </div>
-            <table id="datatablesSimple">
+            <table class="table table-bordered" id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>ID</th>

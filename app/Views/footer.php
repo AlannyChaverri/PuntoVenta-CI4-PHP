@@ -12,27 +12,19 @@
 </footer>
 </div>
 </div>
-<!-- pie -->
-<script src="<?php echo base_url(); ?>/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>/js/scripts.js"></script>
-<script src="<?php echo base_url(); ?>/js/simple-datatables@latest.js"></script>
-<script src="<?php echo base_url(); ?>/js/datatables-simple-demo.js"></script>
-
+<!-- pie b4-->
+<script src="<?php echo base_url() ?>/js/jquery-3.5.1.slim.min.js"></script>
+<script src="<?php echo base_url() ?>/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo base_url() ?>/js/scripts.js"></script>
+<script src="<?php echo base_url() ?>/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url() ?>/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url() ?>/assets/demo/datatables-demo.js"></script>
 
 <script>
     function eliminarRegistro() {
         return confirm("¿Está seguro que quiere eliminar el registro?")
     }
 </script>
-
-<!-- <script>
-    var modalEliminar = document.getElementById('modalEliminar')
-    var btnEliminar = document.getElementById('btnEliminar')
-
-    modalEliminar.addEventListener('show.bs.modal', function() {
-        btnEliminar.focus()
-    })
-</script> -->
 
 </body>
 
