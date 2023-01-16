@@ -32,9 +32,9 @@ $user_session = session();
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo $user_session->nombre; ?> <i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-expanded="false"> <?php echo $user_session->nombre; ?> <i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="<?php echo base_url(); ?>/usuarios/cambia_password">Cambiar credenciales</a></li>
                     <li><a class="dropdown-item" href="#!">Activity Log</a></li>
@@ -52,7 +52,7 @@ $user_session = session();
                 <div class="sb-sidenav-menu">
                     <div class="nav">
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-solid fa-tags"></i>
                             </div>
@@ -61,7 +61,7 @@ $user_session = session();
                                 <i class="fas fa-angle-down"></i>
                             </div>
                         </a>
-                        <div class="collapse" id="collapseProducts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapseProducts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/productos">Productos</a>
                                 <a class="nav-link" href="<?php echo base_url(); ?>/unidades">Unidades</a>
@@ -69,24 +69,22 @@ $user_session = session();
                             </nav>
                         </div>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClientes" aria-expanded="false" aria-controls="collapseProducts">
                             <div class="sb-nav-link-icon">
-                                <i class="fas fa-solid fa-users"></i>
+                                <i class=" fa-solid fa-users"></i>
                             </div>
                             Clientes
                             <div class="sb-sidenav-collapse-arrow">
-                                <i class="fas fa-angle-down">
-                                </i>
+                                <i class="fas fa-angle-down"></i>
                             </div>
                         </a>
-
-                        <div class="collapse" id="collapseClientes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <div class="collapse" id="collapseClientes" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/clientes">Clientes</a>
                             </nav>
                         </div>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCompras" aria-expanded="false" aria-controls="collapseCompras">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompras" aria-expanded="false" aria-controls="collapseCompras">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-solid fa-cash-register"></i>
                             </div>
@@ -95,14 +93,14 @@ $user_session = session();
                                 <i class="fas fa-angle-down"></i>
                             </div>
                         </a>
-                        <div class="collapse" id="collapseCompras" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapseCompras" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/compras/nuevo">Nueva compra</a>
                                 <a class="nav-link" href="<?php echo base_url(); ?>/compras/compras">Compras</a>
                             </nav>
                         </div>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseAdmin">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseAdmin">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-gear"></i>
                             </div>
@@ -111,7 +109,7 @@ $user_session = session();
                                 <i class="fas fa-angle-down"></i>
                             </div>
                         </a>
-                        <div class="collapse" id="collapseAdmin" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapseAdmin" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url(); ?>/configuracion">Configuracion</a>
                                 <a class="nav-link" href="<?php echo base_url(); ?>/cajas">Cajas</a>
