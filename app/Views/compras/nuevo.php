@@ -9,8 +9,10 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-12 col-sm-4">
+                            <input type="hidden" id="id_producto" name="id_producto">
                             <label for="">Codigo</label>
-                            <input type="text" class="form-control" id="codigo" name="codigo" autofocus>
+                            <input type="text" class="form-control" id="codigo" name="codigo" onkeyup="buscarProducto(event,this,this.value)" autofocus>
+                            <label for="codigo" id="resustado_error" style="color: red;"></label>
                         </div>
 
                         <div class="col-12 col-sm-4">
@@ -45,9 +47,10 @@
 
                     </div>
                 </div>
+                <br><br>
 
                 <div class="row">
-                    <table class="table table-dark">
+                    <table id="tablaProductos" class="table table-hover table-striped table-sm table-responsive tablaProductos" width="100%">
                         <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
@@ -61,14 +64,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
+                                <td>111</td>
+                                <td>111</td>
+                                <td>111</td>
+                                <td>111</td>
+                                <td>111</td>
+                                <td>111</td>
+                                <td>111</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-sm-6 offset-md-6">
+                    <div class="col-12 col-sm-6 offset-md">
                         <label style="font-weight: bold; font-size: 30px; text-align: center;">
                             Total $</label>
                         <input type="text" id="total" name="total" size="7" readonly="true" value="0.00" style="font-weight: bold; font-size: 30px; text-align: center;">
@@ -79,3 +88,47 @@
             </form>
         </div>
     </main>
+
+    <script>
+        // estructura jquery
+        $(document).ready(function() {
+
+        });
+
+        function buscarProducto(e, tagCodigo, codigo) {
+            var enterKey = 13;
+            if (codigo != '') {
+                if (e.which == enterKey) {
+                    $.ajax({
+                        url: '<?php echo base_url(); ?>/productos/buscarPorCodigo/' + codigo,
+                        dataType: 'json',
+                        success: function(resultado) {
+                            if (resultado == 0) {
+                                $(tagCodigo).val('');
+
+                            } else {
+                                $(tagCodigo).removeClass('has-error');
+
+                                $('#resultado_error').html(resultado.error);
+
+                                if (resultado.existe) {
+                                    $('#id_producto').val(resultado.datos.id);
+                                    $('#nombre').val(resultado.datos.nombre);
+                                    $('#cantidad').val(1);
+                                    $('#precio_compra').val(resultado.datos.precio_compra);
+                                    $('#subtotal').val(resultado.datos.precio_compra);
+                                    $('#cantidad').focus();
+                                } else {
+                                    $('#id_producto').val('');
+                                    $('#nombre').val('');
+                                    $('#cantidad').val('');
+                                    $('#precio_compra').val('');
+                                    $('#subtotal').val('');
+                                }
+                            }
+                        }
+                    })
+                }
+            }
+        }
+    </script>

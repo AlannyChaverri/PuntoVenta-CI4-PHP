@@ -13,7 +13,6 @@
 </div>
 </div>
 <!-- pie b4-->
-<script src="<?php echo base_url() ?>/js/jquery-3.5.1.slim.min.js"></script>
 <script src="<?php echo base_url() ?>/js/bootstrap.bundle.min.js"></script>
 <script src="<?php echo base_url() ?>/js/scripts.js"></script>
 <script src="<?php echo base_url() ?>/js/jquery.dataTables.min.js"></script>
@@ -21,6 +20,10 @@
 <script src="<?php echo base_url() ?>/assets/demo/datatables-demo.js"></script>
 
 <script>
+    $('#modalEliminar').on('shown.bs.modal', function(event) {
+        $(this).find('.btn-ok').attr('href', $(event.relatedTarget).data('href'));
+    });
+
     function eliminarRegistro() {
         return confirm("¿Está seguro que quiere eliminar el registro?")
     }

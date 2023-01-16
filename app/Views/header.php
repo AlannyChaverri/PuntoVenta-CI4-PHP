@@ -17,8 +17,10 @@ $user_session = session();
     <link href="<?php echo base_url() ?>/css/styles.css" rel="stylesheet" />
     <link href="<?php echo base_url() ?>/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <script src="<?php echo base_url() ?>/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- <script src="<?php echo base_url() ?>/js/jquery-3.5.1.slim.min.js"></script> -->
     <!-- fa -->
-    <script src="https://kit.fontawesome.com/982d15226c.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/982d15226c.js" crossorigin="anonymous"></script> -->
 
 
 </head>

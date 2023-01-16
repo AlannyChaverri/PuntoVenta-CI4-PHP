@@ -89,6 +89,7 @@ $routes->get('productos/editar/(:num)', 'Productos::editar/$1');
 $routes->get('productos/eliminar/(:num)', 'Productos::eliminar/$1');
 $routes->get('productos/eliminados', 'Productos::eliminados');
 $routes->get('productos/reingresar/(:num)', 'Productos::reingresar/$1');
+$routes->get('productos/buscarPorCodigo/(:num)', 'Productos::buscarPorCodigo/$1');
 
 // Clientes
 // rutas post 
